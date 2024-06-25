@@ -44,10 +44,7 @@ export function SidebarLinks(props: SidebarLinksProps) {
 
   // verifies if routeName is the one active (in browser input)
   const activeRoute = useCallback(
-    (routeName: string) => {
-      return pathname?.includes(routeName);
-    },
-    [pathname],
+      (str: string) => {return true}, []
   );
 
   // this function creates the links and collapses that appear in the sidebar (left menu)
@@ -106,7 +103,7 @@ export function SidebarLinks(props: SidebarLinksProps) {
                             {route.icon}
                           </Box>
                           <Text
-                            cursor="not-allowed"
+                            cursor="pointer"
                             me="auto"
                             color={
                               route.disabled
@@ -135,7 +132,7 @@ export function SidebarLinks(props: SidebarLinksProps) {
                         ps="32px"
                       >
                         <Text
-                          cursor="not-allowed"
+                          cursor="pointer"
                           me="auto"
                           fontWeight="500"
                           letterSpacing="0px"
@@ -250,10 +247,10 @@ export function SidebarLinks(props: SidebarLinksProps) {
                       w="100%"
                       alignItems="center"
                       justifyContent="center"
-                      cursor="not-allowed"
+                      cursor="pointer"
                     >
                       <Box
-                        opacity="0.4"
+                        // opacity="0.4"
                         color={
                           route.disabled
                             ? gray
@@ -267,7 +264,7 @@ export function SidebarLinks(props: SidebarLinksProps) {
                         {route.icon}
                       </Box>
                       <Text
-                        opacity="0.4"
+                        // opacity="0.4"
                         me="auto"
                         color={
                           route.disabled
@@ -303,7 +300,7 @@ export function SidebarLinks(props: SidebarLinksProps) {
                 </HStack>
               </Flex>
             ) : (
-              <ListItem ms={0} cursor="not-allowed" opacity={'0.4'}>
+              <ListItem ms={0} opacity={'0.4'}>
                 <Flex ps="32px" alignItems="center" mb="8px">
                   <Text
                     color={
@@ -336,7 +333,7 @@ export function SidebarLinks(props: SidebarLinksProps) {
           alignItems="center"
           mb="10px"
           key={key}
-          cursor="not-allowed"
+          cursor="pointer"
         >
           <Icon
             w="6px"

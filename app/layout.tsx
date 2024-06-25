@@ -37,7 +37,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             children
           ) : (
             <Box>
-              {/*<Sidebar setApiKey={setApiKey} routes={routes} />*/}
+              <Sidebar setApiKey={setApiKey} routes={routes} />
               <Box
                 pt={{ base: '60px', md: '100px' }}
                 float="right"

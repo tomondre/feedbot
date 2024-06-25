@@ -5,7 +5,7 @@ import {
   MdLock,
   MdLayers,
   MdAutoAwesome,
-  MdOutlineManageAccounts,
+  MdOutlineManageAccounts, MdInfoOutline, MdAddChart, MdOutlineNumbers,
 } from 'react-icons/md';
 import { IoMdPerson } from 'react-icons/io';
 import { LuHistory } from 'react-icons/lu';
@@ -23,20 +23,33 @@ const routes: IRoute[] = [
     ),
     collapse: false,
   },
-  // {
-  //   name: 'All Templates',
-  //   disabled: true,
-  //   path: '/all-templates',
-  //   icon: <Icon as={MdHome} width="20px" height="20px" color="inherit" />,
-  //   collapse: false,
-  // },
-  // {
-  //   name: 'My Projects',
-  //   disabled: true,
-  //   path: '/my-projects',
-  //   icon: <Icon as={MdLayers} width="20px" height="20px" color="inherit" />,
-  //   collapse: false,
-  // },
+  {
+    name: 'Previous Assignments',
+    disabled: false,
+    path: '/all-templates',
+    icon: <Icon as={MdLayers} width="20px" height="20px" color="inherit" />,
+    collapse: false,
+  },
+  {
+    name: 'Advanced Feedback',
+    disabled: false,
+    path: '/my-projects',
+    icon: <Icon as={MdAddChart} width="20px" height="20px" color="inherit" />,
+    collapse: false,
+  },{
+    name: 'Grade Estimation',
+    disabled: false,
+    path: '/my-projects',
+    icon: <Icon as={MdOutlineNumbers} width="20px" height="20px" color="inherit" />,
+    collapse: false,
+  },
+  {
+    name: 'Guide',
+    disabled: false,
+    path: '/my-projects',
+    icon: <Icon as={MdInfoOutline} width="20px" height="20px" color="inherit" />,
+    collapse: false,
+  },
   // --- Others ---
   // {
   //   name: 'Other Pages',
